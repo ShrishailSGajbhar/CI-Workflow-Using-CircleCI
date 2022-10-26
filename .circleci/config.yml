@@ -33,7 +33,7 @@ jobs:
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
 workflows:
-  say-hello-world-workflow:
+  print-hello-world-workflow:
     jobs: 
-      - say-hello
-      - say-world
+      - print-hello
+      - print-world
