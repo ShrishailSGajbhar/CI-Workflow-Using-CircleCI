@@ -16,9 +16,8 @@ jobs:
     docker:
       - image: circleci/node:13.8.0
     steps:
-      - run:
-          command: MY_ENVVAR = "Shrishail"
-          command: echo ${MY_ENVVAR}
+      - run: MY_ENVVAR = "Shrishail"
+      - run: echo ${MY_ENVVAR}
 
 workflows:
   # Name the workflow "welcome"
