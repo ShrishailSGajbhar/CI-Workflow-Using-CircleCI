@@ -12,6 +12,14 @@ jobs:
       - image: circleci/node:13.8.0
     steps:
       - run: echo world
+  print_envvar:
+    docker:
+      - image: circleci/node:13.8.0
+    steps:
+      - run:
+          command: MY_ENVVAR = "Shrishail"
+          command: echo ${MY_ENVVAR}
+
 workflows:
   # Name the workflow "welcome"
   welcome:
@@ -21,3 +29,4 @@ workflows:
       - print_world:
           requires:
             - print_hello
+      - print_envvar
