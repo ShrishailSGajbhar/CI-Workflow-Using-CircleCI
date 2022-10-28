@@ -7,6 +7,7 @@ jobs:
       - image: circleci/node:13.8.0
     steps:
       - run: echo "hello world" > ~/output.txt # I had made tiny mistake here
+      - run: pwd
       - persist_to_workspace:
           root: ~/
           paths:
@@ -17,7 +18,7 @@ jobs:
     steps:
       - attach_workspace:
           at: ~/
-      - run: cat ~/output.txt
+      - run: cat output.txt
   print_envvar:
     docker:
       - image: circleci/node:13.8.0
